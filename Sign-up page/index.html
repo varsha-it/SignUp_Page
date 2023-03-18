@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Interactive SignUp Form</title>
+</head>
+<body>
+    <div class="signup_form">
+        <div class="heading_wrapper">
+            <h4>SignUp</h4>
+            <p>Fill in all informations</p>
+        </div>
+        <form>
+            <div class="input_container active">
+                <input type="email" class="input_field" id="user_email" 
+                placeholder="Enter your email">
+                <button class="submit_btn" type="button" id="submitBtn">
+                    <span class="icon">
+                        <i class="fa-regular fa-envelope"></i>
+                    </span>
+                    <span class="icon arrow">
+                        <i class="fa-solid fa-arrow-up"></i>
+                    </span>
+                </button>
+            </div>
+            <div class="input_container">
+                <input type="password" class="input_field"  id="user_password" 
+                placeholder="Enter your password">
+                <button class="submit_btn" type="button" id="submitBtn2">
+                    <span class="icon">
+                        <i class="fa-solid fa-lock"></i>
+                    </span>
+                    <span class="icon arrow">
+                        <i class="fa-solid fa-arrow-up"></i>
+                    </span>
+                </button>
+            </div>
+            <div class="input_container">
+                <input type="password" class="input_field"  id="user_confirm_password" 
+                placeholder="Confirm your password">
+                
+                <button class="submit_btn confirm" type="button">
+                    <span class="icon">
+                        <i class="fa-solid fa-lock"></i>
+                    </span>
+                    <span class="icon arrow">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

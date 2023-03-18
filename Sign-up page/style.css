@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #311e68;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signup_form {
+  position: relative;
+  width: 35rem;
+  height: 14rem;
+  background: transparent;
+  border-radius: 1.4rem;
+}
+.heading_wrapper {
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  background: white;
+  border-radius: 1.4rem 1.4rem 0 0;
+  padding-left: 2rem;
+  padding-top: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+h4 {
+  font-size: 2rem;
+}
+p {
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
+}
+form {
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  bottom: 0;
+  left: 0;
+  border-radius: 0 0 1.4rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #EAEAEA; */
+}
+form .input_container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 0 0 1.4rem 1.4rem;
+  border: none;
+  background-color: #eaeaea;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, 
+  height 0.4s ease;
+  transform-origin: center;
+  transform-style: preserve-3d;
+}
+.input_container input {
+  width: 80%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 2rem;
+  font-size: 1.2rem;
+  background-color: transparent;
+}
+.input_container.active {
+  transform: translateY(0) scale(1) !important;
+  background-color: #eaeaea !important;
+}
+.input_container.center {
+  transform: translateY(25%) scale(0.92) !important;
+}
+.input_container.done {
+  transform: translateY(0%) scale(1) !important;
+  height: 0 !important;
+  background-color: #eaeaea !important;
+}
+.input_container.active button {
+  display: block;
+}
+form .input_container:nth-child(1) {
+  z-index: 3;
+}
+form .input_container:nth-child(2) {
+  transform: translateY(25%) scale(0.92);
+  background-color: #8f44ee;
+  z-index: 2;
+}
+form .input_container:nth-child(3) {
+  transform: translateY(50%) scale(0.85);
+  background-color: #9878f8;
+  z-index: 1;
+}
+.submit_btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 20%;
+  height: 100%;
+  background-color: #c8b5ff;
+  z-index: 9;
+  display: none;
+  border-radius: 0 0 1.4rem 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  pointer-events: none;
+  transition: background-color 0.5s 
+  cubic-bezier(0.88, 0.28, 0, 1.33);
+}
+.submit_btn .icon {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 2.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8a62ff;
+  transition: 0.5s cubic-bezier(0.88, 0.28, 0, 1.33);
+}
+.submit_btn.active .icon {
+  transform: translateY(-100%);
+}
+.submit_btn.confirm.active {
+  background-color: #79d758;
+}
+.submit_btn.confirm.active .icon.arrow {
+  color: #027500;
+}
